@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hi, this is a template free, please suscribe to my chanel
+AlexCG Design, Thank you, I hope this template helps you -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página web completa</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+<style>
+    :root{
+  --color1: rgb(219,144,.5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11,194,211, 0.623);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenido:45px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'open sans';
+  background: var(--fondo);
+}
+
+img{
+  vertical-align: top;
+}
+
+
+/* Preloader */
+.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #cef;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+
+  50%,
+  100% {
+    top: 19px;
+    height: 26px;
+  }
+}
+
+/* Header */
+
+header{
+  width: 100%;
+  height:500px;
+  background: linear-gradient(to bottom,
+  rgba(211,135,20, .6),
+  rgba(29,241,171, .6),
+  rgba(7,109,150, .45)
+  ), url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglGRRPScsBXBHPPhOLUbQlHynCP2LJM3hteAC5C5-LPG0fodHCya_lLYCJqXniYpOUImnF1yywcHWlh6DbRV8kx713ONMIxCFKQt_wKliuXAQk2LguRjHvBk9fDdQeQPzYBNk9r3nCZf_FBd5aQytQF2Gi7Ul48mDnNPpH4GwyDwMCF8_dO7MlOfvinzg/s320/fondo.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+nav{
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.5)
+}
+
+.nav1{
+  background: transparent;
+  height: 80px;
+  color:#fff;
+}
+
+.nav2{
+  background: var(--fondo);
+  height:100px;
+  color:#000;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  max-width:1000px;
+  height:inherit;
+  overflow: hidden;
+}
+
+nav .enlaces a{
+  display: inline-block;
+  padding: 5px 0;
+  margin-right: 17px;
+  font-size: 17px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+}
+
+nav .enlaces a:hover{
+  border-bottom: 3px solid #1498a4;
+  transition: 0.6s;
+}
+
+.logo, .logo img{ height:80px;}
+
+.icono{
+  display:none;
+  font-size: 24px;
+  padding: 23.5px 20px;
+}
+
+.textos{
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color:#fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.textos>h1{font-size:80px;;}
+
+.textos>h2{font-size: 30px; font-weight: 300;}
+
+/* Main */
+
+.contenedor{
+  margin:auto;
+  padding: var(--margenes) 0;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contenedor h3{
+  font-size: var(--titulos);
+  color: var(--color1);
+  margin-bottom: var(--espacios);
+}
+
+.contenedor p{
+  font-size: var(--subtitulos);
+  font-weight: 300;
+  color: var(--color1);
+}
+
+.after::after{
+  content:'';
+  display: block;
+  margin: auto;
+  margin-top: var(--espacios);
+  width: 100px;
+  height: 2px;
+  background: var(--color1);
+  margin-bottom: var(--espacios-contenido);
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content-card{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  overflow: hidden;
+  height:500px;
+}
+
+.people{
+  height: 80%;
+}
+
+.content-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-team{
+  height: 20%;
+  width: 100%;
+  padding: var(--espacios) 0;
+}
+
+.about{
+  background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2G2n4AbUrt0G1KydP2thb_GJdmflY20ji44mPx3c2Jwg7lVcQOce60ygcRjjqD3obSYoDpclnccNwDxmAfCm_Dld8bO38WwF3YU5iKGFOl8Z-OXykJgbnbIaHKqH5HBbxK7ZHaDYI_fOXwr_yiF8_OBa8nVN0G19NxSfNftxl1Q-4zzozdBjVHsXOTZs/s320/teclado.jpg);
+  height: auto;
+}
+
+.servicios{
+  display: flex;
+  color:#fff;
+  justify-content: space-between;
+  margin: auto;
+  flex-wrap: wrap;
+}
+.caja-servicios{
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+.caja-servicios>h4{
+  margin-bottom: var(--espacios);
+}
+
+.caja-servicios>p{
+  text-align: center;
+}
+
+.botones-work{
+  overflow: hidden;
+}
+
+.botones-work li{
+  display: inline-block;
+  text-align: center;
+  margin-left: var(--espacios);
+  margin-bottom: var(--espacios-contenido);
+  padding: 6px 12px;
+  border: 1px solid var(--color1);
+  list-style: none;
+  color: var(--color1);
+}
+
+.botones-work li:hover{
+  background: var(--color1);
+  color:#fff;
+  cursor: pointer;
+}
+
+.botones-work .active{
+  background: var(--color1);
+  color:#fff;
+}
+
+.galeria-work{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cont-work{
+  width: 31%;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+  height:300px;
+  overflow: hidden;
+  margin-bottom: var(--espacios-contenido);
+}
+
+.img-work{
+  height: 90%;
+  width: 100%;
+}
+
+.img-work img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textos-work{
+  height: 10%;
+}
+
+.textos-work h4{
+  line-height: 30px;
+  font-weight: 300;
+}
+
+/* Footer */
+
+footer{background:url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2G2n4AbUrt0G1KydP2thb_GJdmflY20ji44mPx3c2Jwg7lVcQOce60ygcRjjqD3obSYoDpclnccNwDxmAfCm_Dld8bO38WwF3YU5iKGFOl8Z-OXykJgbnbIaHKqH5HBbxK7ZHaDYI_fOXwr_yiF8_OBa8nVN0G19NxSfNftxl1Q-4zzozdBjVHsXOTZs/s320/teclado.jpg);}
+
+.marca-logo{
+  width: 40%;
+  margin: auto;
+  margin-bottom: var(--espacios);
+}
+.marca-logo img{
+  width: 100%;
+}
+.iconos{
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 100%;
+}
+.fab{
+  font-size:60px;
+  color: #FFF;
+  margin-bottom: var(--espacios);
+  display: inline-block;
+}
+
+footer p{
+  margin-top:var(--espacios);
+}
+
+@media screen and (max-width: 700px){
+  .nav2{
+    color: #fff;
+  }
+
+  .icono{
+    display:block;
+    cursor: pointer;
+  }
+
+  .enlaces{
+    position: fixed;
+    top:80px;
+    background: #2c3e50;
+    left: 0;
+    height: 100%;
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .enlaces a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: #34495e;
+    color:#fff;
+  }
+
+  .textos>h1{font-size: 70px;}
+  .textos>h2{font-size:35px;}
+
+  .content-card{
+    width: 48%;
+    margin-bottom:var(--margenes);
+  }
+
+  :root{
+    --margenes: 30px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  :root{
+    --espacios-contenido: 25px;
+  }
+
+  .content-card{
+    width: 90%;
+  }
+
+  .caja-servicios{
+    width: 90%;
+    margin-bottom: var(--margenes);
+  }
+
+  .cont-work{
+    width: 85%;
+  }
+
+  .marca-logo{
+    width: 80%;
+  }
+
+  .iconos{
+    margin: auto;
+  }
+}
+
+  .quimi{
+   position: fixed;
+   width: 90px;
+   bottom: 24px;
+  }
+
+</style>
+<body class="hidden">
+
+  <img class="quimi"  src="https://media2.giphy.com/media/uPe7W9c3kvQMI69uPi/giphy.gif?cid=a267dfa3n9yaodcwmudanfk4tas2xok4xu8onlj1zevxq0t8&rid=giphy.gif&ct=s" alt="">
+    <div class="centrado" id="onload">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+    <header>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiddoZbSnEpHfE8rRA7upicmFU26tPBPJl9dKmnb1PQBJ5StGYk4a4i1CqTMRLsnQcZwxvAkG795m0yItaTXNkCBTdgp2XmVkCEF9NhEmt73CskyrvT7yUdVbxRl9IbU8tEHzeBVhLAswfX9sYqRBrTXtY0fIY1DYEx1RIwi4oYw_F0yW2thdM3AWUALWU/s320/backgroundlogin.gif" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#" id="enlace-equipo" class="btn-header">Creativos</a>
+                    <a href="paignasIA.html" class="btn-header">HERRAMIETAS IA</a>
+                    <a href="documentos.html" class="btn-header">Documentacion</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+            </div>
+        </nav>
+        <div class="textos">
+            <h1>MOLECULAS EN RED</h1>
+            <h2>Potenciando la Enseñanza de la Química con AI y RS</h2>
+            
+        </div>
+    </header>
+    <main>
+
+    
+        <section class="team contenedor" id="equipo">
+            <h3></h3>
+            <p class="after">VIDEOS EDUCATIVOS </p>
+            <div class="card">
+                <div class="content-card">
+                    <div class="people">
+                        
+
+                        <iframe width="280" height="420" src="https://www.youtube.com/embed/qAJCRlzkXuk" title="CASCADA DE HUMO - Experimentos científicos para realizar en casa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="texto-team">
+                        <h4>K</h4>
+                        <p>Como realizar una cascada de HUMO. </p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="people">
+                        <iframe width="280" height="420" src="https://www.youtube.com/embed/aQP38VHEKkg" title="Científicos EXPERIMENTOS CASEROS! 🧪😱 #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
+                    <div class="texto-team">
+                        <h4>C</h4>
+                        <p>Diferentes experimentos, compilado de experimentos para practicar.</p>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <div class="people">
+                        <iframe width="478" height="849" src="https://www.youtube.com/embed/a5zXg_XE13g" title="Haz un volcán de hielo🌋" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      </div>
+                    <div class="texto-team">
+                        <h4>M</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="servicio">
+            <div class="contenedor">
+                <h3>EXPERIMENTOS</h3>
+                <p class="after">Compartiendo conocimiento con la tecnologia y la quimica</p>
+                <div class="servicios">
+                    <div class="caja-servicios">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgM_v8j-1zD7dBXMVJSXirWp0_UjrBVtvGZSrwjOpSEueG6voU-c3PO2We1ZdautHsSbW2Xe61xeHaC7Uf1vzVyTYwem8sX_FmsQx9Ggee2VWxPjsrSGMikU9MFo4CrpNyglEvpXyQiJdXJKp9oz5o5sCHP2y6bwqwpWj26JhDZu2hbpB_jAEVZ1DADHZo/s1600/heart.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Te mostramos nuestro trabajo.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIrcZDGQyIKrw-sf05VTk5iHlUkj7YY31tVdup4dPMpva_ge0kZ60QVepxZ_3QBMq50_i6MbQfb3TB7r6zkOGp_6fQFtb14WbezL6F5WY6_p2YICwZ07fqVKC25ubkH1XPgN3NztTrM0ttut5MiLjPclZ7jc-28JnXxoBZRhlYKFyf2g8ZHP6jVK_cCeg/s1600/responsive.png" alt="">
+                        <h4>Herramientas</h4>
+                        <p>Nuestras herramientas AI.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLCFeAQ1aKVX2IAkzttXbdxSZl1rwHzIpIOHTZz5dAv8EyxYpSrMuyyS42epLB42mJ56qNRc7p8UXlXyaSPe8jTz5vOA5D9smrObyJ51cTuU-jlxH8voMXpOYiEyK3cMXEmPcRxAcdb-ctfG9gu6YW2Xy9q9uwSGDTeYXKElWd9I-oqVYbWABYciNkQzE/s1600/efectos.png" alt="">
+                        <h4>Material / Documentacion</h4>
+                        <p>Documentos utiles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work contenedor" id="trabajo">
+            <h3>Experimentos publicacos en TIK TOK</h3>
+            <p class="after">Hacemos de algo simple con algo extraordinario y lo compartimos al mundo por redes sociales</p>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>TODO</li>
+                    <li class="filter active" data-nombre='programacion'>Nuestros</li>
+                    <li class="filter" data-nombre='diseño'>Otros</li>
+                    <li class="filter" data-nombre='marketing'>Teoricos</li>
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work programacion">
+                    <div class="img-work">
+
+                        <a href="https://www.tiktok.com/@gatita15151/video/7407989728873647365?_r=1&_t=8pElppCatVe"><img src="experi1.png" alt=""></a>
+                        
+                    </div>
+                    <div class="textos-work">
+
+                        <a href="https://www.tiktok.com/@gatita15151/video/7407989728873647365?_r=1&_t=8pElppCatVe" >Experimento 1</a>
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="experi2.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                      <a href="https://www.tiktok.com/@gatita15151/video/7407833222224170246?_r=1&_t=8pEdHxfskKs" >Experimento 2</a>
+
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="experi3.png" alt="">
+                    </div>
+                    <div class="textos-work">
+                      <a href="https://www.tiktok.com/@profejuanpablomedina/video/7287758064172698886?q=experimentos%20quimica%20colegio&t=1727037145669" >Experimento 3</a>
+                    </div>
+                </div>
+
+              
+                <div class="cont-work diseño">
+                    <div class="img-work">
+              
+                        <a href="https://www.tiktok.com/@quimiclann/video/7373379580708588833?q=experimentos%20quimicia&t=1727039006269" ><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtASjEr3aQL2l-iIRMudV5mxG5BPDJ5JtqSVAtQvHzngvYzGCwTpHXeyJkW2RhPlBYm1L7PIKk_Ha-YoP1MfegeBfx3OSKRWMuSoKe5FAeDJdxQjPwvMvIWcaYBJp-qXYgUkytLFnvCf8TUWilfjwiDBKQdY8quUqf6Hjwb_lE34jBX7TZtfuDM9hg5NI/s320/Screenshot%202024-09-22%20170341.png" alt=""></a>
+
+                    </div>
+                    <div class="textos-work">
+                        <h4>fuego azul</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                       
+                        <a href="https://www.tiktok.com/@ceprenacimiento/video/7342914038856289541?q=experimentos%20quimicia&t=1727039006269" alt=""><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiaStZxFmKPh3Qn8qZNQoENqztFcq3Hi_c0U7iOHGjtK_ShPa-DIl-VkQIKT0GU7AU2QWKkzqbgozI0Fv0Ne_1ACHSUHM8gDk1NGvix0IpwEdMgI1hQZQDbECm2_EyXba4sxoSGHWeAQg31QuI9DRY63TNmybv30ig1gcmgMV9LVozqjHTcJTQZTKbcEeM/s474/Screenshot%202024-09-22%20170810.png" alt=""></a>
+
+                        
+                    </div>
+                    <div class="textos-work">
+                        <h4>Decantacion de agua</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                    
+                        <a href="https://www.tiktok.com/@sciencewithana/video/7335271061736426758?q=experimentos%20quimicia&t=1727039006269" alt=""><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnDfs-8GjUp_Roc__mpNx61wFOUaYJ5hPHfjfQQUixCafSwyh_j5FLQQJxV6NYbhRncl-9Kzc_57PD68nNIJdXIlitoZWZ-YFSeSttpUb-CxscS9FG2a5tsuuzk_C7aVho6a5LGkTvExZrSzkmLhpASlbx0vknZCNtjhSRr61voGDGbngUvN3-EnWkSec/s320/Screenshot%202024-09-22%20171006.png" alt=""></a>
+       
+                    </div>
+                    <div class="textos-work">
+                        <h4>Lampara de LAVA</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                      <a href="https://www.tiktok.com/@pruebat.org_fcs/video/7265036405770947845?q=QUE%20ES%20QUIMICA&t=1727039522129" alt=""><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIo5Mp6Z1Aa2qp1cLyMCFCt864Nb3qeErtgHur8gXsfeez4lvcA2euE8L_YE4a7NrOdKtJwxGyJF0C6wFbHJZIGLZY86DdtrQbJiRYWnwklanvCY2fa5IWZyOZU4mIyA8fRafyBjN-UcwjCXqN1JVUzaMKEHw4DpManl18yjwmbMBZVd1Ok_BSmYL_xKw/s320/Screenshot%202024-09-22%20171216.png" alt=""></a>
+
+                    </div>
+                    <div class="textos-work">
+                        <h4>QUE ES QUIMICA</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                      <a href="https://www.tiktok.com/@pruebat.org_fcs/video/7327019698330111237?q=TABLA%20PERIODICA&t=1727039632009" alt=""><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgtOjUjborPIkDaX5UfwCodshsK4vRr7E-EYHqAqGiT49gbKv9pKx7-lUbO-doPe8whob8VOrpEqTdn8SNdmZlj5do-Eh_ZBLii_5W-KCJ5BZoKjlZmu7nInWP8zTnA3L36O0-AAoGHWqtFMWul8l8dLvMj62JD_4gnmFSggjzqMq30uveoSlBAUb0umk0/s320/Screenshot%202024-09-22%20171408.png" alt=""></a>
+
+
+                        
+                    </div>
+                    <div class="textos-work">
+                        <h4>TABLA PERIODICA</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                      <a href="https://www.tiktok.com/@divulgandoando/video/7247213785381965062?q=QUIMICA%20PARA%20QUE%20SIRVE&t=1727039790328" alt=""><img src="  https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidn6n3WGGzwk4xhy_BEdux_S3-_16N27E5pC87Tsia1mawOqDCKCXtRDBTYl5wY3lkmVwPyZC91iIVhqb9C8Z1gcC2AuEDSwFJNOqoYFy5OBG8KDFcDmYb6qgYwcMp-CRmuTALbs3K5Gs0eiG9M2RKgRYTgiitkSUBQxYzjiEXZsTIAOu4g5tmhss9z3s/s320/Screenshot%202024-09-22%20171642.png" alt=""></a>
+
+                    </div>
+                    <div class="textos-work">
+                        <h4>PARA QUE ?</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacto">
+        <div class="footer contenedor">
+            <div class="marca-logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="iconos">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-github"></i>
+            </div>
+            <p>La pasión e innovación es lo que nos distingue del resto</p>
+        </div>
+
+    </footer>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <script src="filtro.js"></script>
+</body>
+</html>
